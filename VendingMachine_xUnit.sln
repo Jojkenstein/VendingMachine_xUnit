@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VendingMachineFolderFIX", "VendingMachineFolderFIX\VendingMachineFolderFIX.csproj", "{267A5563-5CE9-4B42-BB27-CB88017B88EC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VendingMachineFolderFIX.Tests", "VendingMachineFolderFIX.Tests\VendingMachineFolderFIX.Tests.csproj", "{F9895D52-99F5-4C11-B1FB-DB1DF1DE1E00}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{267A5563-5CE9-4B42-BB27-CB88017B88EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{267A5563-5CE9-4B42-BB27-CB88017B88EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{267A5563-5CE9-4B42-BB27-CB88017B88EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{267A5563-5CE9-4B42-BB27-CB88017B88EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9895D52-99F5-4C11-B1FB-DB1DF1DE1E00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9895D52-99F5-4C11-B1FB-DB1DF1DE1E00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9895D52-99F5-4C11-B1FB-DB1DF1DE1E00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9895D52-99F5-4C11-B1FB-DB1DF1DE1E00}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FAD79BA9-9F15-4FE6-BA86-497E2E336780}
+	EndGlobalSection
+EndGlobal
