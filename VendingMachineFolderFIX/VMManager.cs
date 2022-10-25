@@ -184,18 +184,20 @@ namespace VendingMachine
                 Console.ReadKey();
             }
         }
-        public void EndTransaction()
+        
+        public int[] EndTransaction()
         {
-            Console.Clear();
-            Console.WriteLine($"Your remaning funds ({availableFunds} SEK) will be payed back in bills and/or coins.\n");
+            Console.WriteLine($"your remaning funds ({availableFunds} sek) will be payed back in bills and/or coins.\n");
 
             int mod, rest;
             string billcoins;
+            int[] billcoinAmount = new int[denomination.Length];
             for (int i = denomination.Length - 1; i >= 0; i--)
             {
-                rest = availableFunds % (denomination[i]);
-                mod = (availableFunds - rest) / (denomination[i]);
+                rest = availableFunds % denomination[i];
+                mod = (availableFunds - rest) / denomination[i];
                 availableFunds = availableFunds - mod * denomination[i];
+                billcoinAmount[i] = mod;
                 if (denomination[i] > 10)
                 {
                     if (mod > 1)
@@ -215,9 +217,8 @@ namespace VendingMachine
                     Console.WriteLine($"{mod} pcs of {denomination[i]} SEK {billcoins}\r");
                 }
             }
-            Console.ReadKey();
+            return billcoinAmount;
         }
-
         public void MainMenu()
         {
             Console.Clear();
@@ -253,7 +254,9 @@ namespace VendingMachine
                     break;
                 case "4":
                 case "E":
+                    Console.Clear();
                     EndTransaction();
+                    Console.ReadKey();
                     break;
                 case "5":
                 case "U":

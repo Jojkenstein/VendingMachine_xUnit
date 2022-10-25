@@ -5,7 +5,6 @@ namespace VendingMachine.Tests
 {
     public class UnitTest1
     {
-        MethodsToTest methods = new MethodsToTest();
         VMManager sut = new VMManager();
 
         [Fact]
@@ -31,8 +30,8 @@ namespace VendingMachine.Tests
         [Fact]
         public void BillCoinAmountTest()
         {
-            int inputMoney = 2999;
-            (int[] billcoinAmount, int availableFunds) = methods.EndTransactionTEST(inputMoney);
+            sut.availableFunds = 2999;
+            int[] billcoinAmount = sut.EndTransaction();
             Assert.Equal(2, billcoinAmount[7]);
             Assert.Equal(1, billcoinAmount[6]);
             Assert.Equal(4, billcoinAmount[5]);
@@ -46,9 +45,9 @@ namespace VendingMachine.Tests
         [Fact]
         public void ZeroFundsTest()
         {
-            int inputMoney = 2999;
-            (int[] billcoinAmount, int availableFunds) = methods.EndTransactionTEST(inputMoney);
-            Assert.Equal(0, availableFunds);
+            sut.availableFunds = 2999;
+            sut.EndTransaction();
+            Assert.Equal(0, sut.availableFunds);
         }
     }
 }

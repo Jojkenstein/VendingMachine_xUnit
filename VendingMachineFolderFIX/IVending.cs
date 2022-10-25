@@ -11,7 +11,7 @@ namespace VendingMachine
         public void Purchace();                 // Purchase, to buy a product.
         public void ShowAll();                  // ShowAll, show all products.
         public void InsertMoney(int amount);    // InsertMoney, add money to the pool.
-        public void EndTransaction();           // EndTransaction, returns money left in appropriate amount of change.
+        public int[] EndTransaction();           // EndTransaction, returns money left in appropriate amount of change.
     }
 }
 
